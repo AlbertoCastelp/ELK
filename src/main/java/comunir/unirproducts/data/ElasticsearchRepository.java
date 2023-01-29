@@ -8,8 +8,8 @@ import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.SearchHits;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.SearchHits;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,7 @@ public class ElasticsearchRepository {
 
     private final String[] nameSarchFields = {"name.search", "name.search._2gram", "name.search._3gram"};
 
-    private final ElasticsearchRepository productRepository;
+    private final ElasticProductRepository productRepository;
 
     private final ElasticsearchOperations elasticClient;
 
@@ -43,20 +43,19 @@ public class ElasticsearchRepository {
 
     public List<ElasticProduct> searchByName(String namePart){
         BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
-        boolQuery.must(QueryBuilder.multiMatchQuery(namePart, nameSarchFields)
-                .type(MultiMatchQueryBuilder.Type.BOOL_PREFIX));
-        NativeSearchQueryBuilder nativeSearchQuery = new NativeSearchQueryBuilder().withQuery(boolQuery);
-        Query query = nativeSearchQueryBuilder.build();
-        SearchHits results = elasticClient.search(query, ElasticProduct.class);
+        boolQuery.must(QueryBuilders.multiMatchQuery(namePart, nameSarchFields).type(MultiMatchQueryBuilder.Type.BOOL_PREFIX));
+        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder().withQuery(boolQuery);
+        NativeSearchQuery query = nativeSearchQueryBuilder.build();
+        SearchHits<ElasticProduct> result = elasticClient.search(query, ElasticProduct.class);
         return result.getSearchHits().stream().map(SearchHit::getContent).collect(Collectors.toList());
     }
-    public List<ElasticProduct> searchByDescription(String Description) {
-        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+    public List<ElasticProduct> searchByDescription(String description) {
+        BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
         boolQuery.must(QueryBuilders.matchQuery("description", description));
         NativeSearchQueryBuilder nativeSearchQueryBuilder =
                 new NativeSearchQueryBuilder().withQuery(boolQuery);
         NativeSearchQuery query = nativeSearchQueryBuilder.build();
-        SearchHits results = elasticClient.sarch(query, ElasticProduct.class);
+        SearchHits<ElasticProduct> result = elasticClient.search(query, ElasticProduct.class);
         return result.getSearchHits().stream().map(SearchHit::getContent).collect(Collectors.toList());
     }
     public ElasticProduct saveProduct(ElasticProduct product) {

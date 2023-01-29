@@ -10,4 +10,6 @@ public interface ElasticProductRepository extends ElasticsearchRepository<Elasti
     Optional<ElasticProduct> findByName(String name);
     List<ElasticProduct> findByCountry(String country);
     List<ElasticProduct> findByVisible(Boolean visible);
+
+    ElasticProduct saveProduct(ElasticProduct product);
 }

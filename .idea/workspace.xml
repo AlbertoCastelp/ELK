@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d51c02d4-caea-430d-91a0-cb195f3363a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/ProductRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/config/ElasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/config/ElasticsearchConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/controller/ElasticProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/controller/ElasticProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductSerciceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
