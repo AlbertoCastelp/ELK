@@ -5,34 +5,38 @@ import comunir.unirproducts.model.ElasticProduct;
 import java.util.List;
 
 public interface ElasticProductService {
+    List<ElasticProduct> searchByName(String productName);
 
-    ElasticProduct createProduct(CreateProductRequest request) {
-        return null;
-    }
+    List<ElasticProduct> getAviableProducts();
 
-    ElasticProduct getProductById(String productId) {
+    /*
+            default ElasticProduct createProduct(CreateProductRequest request) {
+                return null;
+            }
+        */
+    default ElasticProduct getProductById(String productId) {
         return null;
     }
 
     ElasticProduct getProductByIdent(String productId);
 
-    ElasticProduct getProductByName(String productName) {
+    default ElasticProduct getProductByName(String productName) {
         return null;
     }
 
-    List<ElasticProduct> getProductsByCountry(String country) {
+    default List<ElasticProduct> getProductsByCountry(String country) {
         return null;
     }
 
-    List<ElasticProduct> searchByDescription(String productDescription) {
+    default List<ElasticProduct> searchByDescription(String productDescription) {
         return null;
     }
 
-    List<ElasticProduct> searByName(String productName) {
+    default List<ElasticProduct> searByName(String productName) {
         return null;
     }
 
-    List<ElasticProduct> getAvailableProducts() {
+    default List<ElasticProduct> getAvailableProducts() {
         return null;
     }
 }

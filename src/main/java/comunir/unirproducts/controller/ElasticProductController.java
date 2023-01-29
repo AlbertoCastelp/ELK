@@ -16,106 +16,78 @@ import java.util.List;
 
 public class ElasticProductController {
 
+    private final ElasticProductService service;
 
+    @GetMapping("/elastic/product/{productId}")
+    public ResponseEntity<ElasticProduct> getProductById(@PathVariable String productId) {
 
-        private final ElasticProductService service;
+        ElasticProduct product = service.getProductById(productId);
 
-        @GetMapping("/elastic/product/{productId}")
-        public ResponseEntity<ElasticProduct> getProducById(@PathVariable String productId) {
-
-            ElasticProduct product = service.getProductById(productId);
-
-            if  (product != null) {
-                return ResponseEntity.ok(product);
-            }else {
-                return ResponseEntity.notFound().build();
-            }
-        }
-
-        @GetMapping("/elastic/products")
-        public ResponseEntity<ElasticProduct> getProducts() {
-
-            List<ElasticProduct> product = service.getAvailableProducts();
-
-            if  (product != null) {
-                return ResponseEntity.ok((ElasticProduct) product);
-            }else {
-                return ResponseEntity.notFound().build();
-            }
-        }
-
-        @GetMapping("/elastic/products/match/{value}")
-        public ResponseEntity<ElasticProduct> getProductByName(@PathVariable String value) {
-
-            List<ElasticProduct> product = service.searchByName(value);
-
-            if  (product != null) {
-                return ResponseEntity.ok((ElasticProduct) product);
-            }else {
-                return ResponseEntity.notFound().build();
-            }
-        }
-
-        @GetMapping("/elastic/products/search/as-you-type/{value}")
-        public ResponseEntity<List<ElasticProduct>> getProductByName(@PathVariable String value) {
-
-            List<ElasticProduct> product = service.searchByName(value);
-
-            if  (product != null) {
-                return ResponseEntity.ok(product);
-            }else {
-                return ResponseEntity.notFound().build();
-            }
-        }
-
-        @GetMapping("/elastic/products/search/full-text/{value}")
-        public ResponseEntity<List<ElasticProduct>> searchByDescription(@PathVariable String value) {
-
-            List<ElasticProduct> product = service.searchByDescription(value);
-
-            if  (product != null) {
-                return ResponseEntity.ok(product);
-            }else {
-                return ResponseEntity.notFound().build();
-            }
-        }
-
-        @PostMapping("/elastic/products")
-        public ResponseEntity<ElasticProduct> getProduct(@RequestBody CreateElasticProductRequest request) {
-
-            ElasticProduct createElasticProduct = service.createElasticProduct(request);
-
-            if  (createElasticProduct != null) {
-                return ResponseEntity.status(HttpStatus.CREATED).body(createElasticProduct);
-            }else {
-                return ResponseEntity.badRequest().build();
-            }
-        }
-        @Autowired
-        private ElasticSearchQuery elasticSearchQuery;
-
-        @PostMapping("/createOrUpdateDocument")
-        public ResponseEntity<Object> createOrUpdateDocument(@RequestBody Product product) throws IOException {
-            String response = elasticSearchQuery.createOrUpdateDocument(product);
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-
-        @GetMapping("/getDocument")
-        public ResponseEntity<Object> getDocumentById(@RequestParam String productId) throws IOException {
-            Product product =  elasticSearchQuery.getDocumentById(productId);
-            return new ResponseEntity<>(product, HttpStatus.OK);
-        }
-
-        @DeleteMapping("/deleteDocument")
-        public ResponseEntity<Object> deleteDocumentById(@RequestParam String productId) throws IOException {
-            String response =  elasticSearchQuery.deleteDocumentById(productId);
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-
-        @GetMapping("/searchDocument")
-        public ResponseEntity<Object> searchAllDocument() throws IOException {
-            List<Product> products = elasticSearchQuery.searchAllDocuments();
-            return new ResponseEntity<>(products, HttpStatus.OK);
+        if  (product != null) {
+            return ResponseEntity.ok(product);
+        }else {
+            return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/elastic/products")
+    public ResponseEntity<List<ElasticProduct>> getProducts() {
+
+        List<ElasticProduct> product = service.getAvailableProducts();
+
+        if  (product != null) {
+            return ResponseEntity.ok((product));
+        }else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+/*
+    @GetMapping("/elastic/products/match/{value}")
+    public ResponseEntity<ElasticProduct> getProductByName(@PathVariable String value) {
+
+        ElasticProduct product = service.getProductByName(value);
+
+        if  (product != null) {
+            return ResponseEntity.ok((ElasticProduct) product);
+        }else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/elastic/products/search/as-you-type/{value}")
+    public ResponseEntity<List<ElasticProduct>> getProductByName(@PathVariable String value) {
+
+        List<ElasticProduct> product = service.searchByName(value);
+
+        if  (product != null) {
+            return ResponseEntity.ok(product);
+        }else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+*/
+    @GetMapping("/elastic/products/search/full-text/{value}")
+    public ResponseEntity<List<ElasticProduct>> searchByDescription(@PathVariable String value) {
+
+        List<ElasticProduct> product = service.searchByDescription(value);
+
+        if  (product != null) {
+            return ResponseEntity.ok(product);
+        }else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+/*
+    @PostMapping("/elastic/products")
+    public ResponseEntity<ElasticProduct> getProduct(@RequestBody CreateProductRequest request) {
+
+        ElasticProduct createProduct = service.createProduct(request);
+
+        if  (createProduct != null) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(createProduct);
+        }else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+*/
 }

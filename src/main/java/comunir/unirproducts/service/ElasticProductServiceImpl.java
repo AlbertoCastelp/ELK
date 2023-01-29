@@ -9,7 +9,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class ElasticProductSerciceImpl extends ElasticProductService {
+public class ElasticProductServiceImpl implements ElasticProductService {
 
     private final ElasticsearchRepository repo;
 
@@ -35,14 +35,20 @@ public class ElasticProductSerciceImpl extends ElasticProductService {
 
     @Override
     public List<ElasticProduct> searchByName(String productName) {
-        return repo.searchByName(productName);
+        return null;
     }
+
+    @Override
+    public List<ElasticProduct> getAvailableProducts() {
+        return null;
+    }
+
 
     @Override
     public List<ElasticProduct> getAviableProducts(){
         return repo.getVisible();
     }
-
+/*
     @Override
     public ElasticProduct createProduct(CreateProductRequest request) {
         if (request != null && StringUtils.hasLength(request.getName().trim())
@@ -50,13 +56,18 @@ public class ElasticProductSerciceImpl extends ElasticProductService {
             && StringUtils.hasLength(request.getCompany().trim())
             && request.getVisible() != null) {
 
-        ElasticProduct product = ElasticProduct.builder().idString.value(request.getName().hashCode()))
-            .name(request.getName()).description(request.getDescription)))
+        ElasticProduct product = ElasticProduct.builder().idString.value(request.getName().hashCode())
+            .name(request.getName()).description(request.getDescription())
             .country(request.getCountry()).visible(request.getVisible()).build();
 
         return repo.saveProduct(product);
         }else {
             return null;
         }
+    }
+*/
+    @Override
+    public ElasticProduct getProductById(String productId) {
+        return null;
     }
 }

@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51c02d4-caea-430d-91a0-cb195f3363a3" name="Changes" comment="" />
+    <list default="true" id="d51c02d4-caea-430d-91a0-cb195f3363a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/config/ElasticsearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/config/ElasticsearchConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/controller/ElasticProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/controller/ElasticProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductSerciceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/service/ElasticProductService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,7 +40,39 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="comunir.unirproducts.service" />
+      <recent name="comunir.unirproducts.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alber\OneDrive\Escritorio\REPOSITORIO GITHUB\ELK" />
+      <recent name="C:\Users\alber\OneDrive\Escritorio\REPOSITORIO GITHUB\ELK\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alber\OneDrive\Escritorio\REPOSITORIO GITHUB\ELK" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="comunir.unirproducts.service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="All in unir-products" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unir-products" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in unir-products" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -33,5 +84,16 @@
       <updated>1674985259926</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
