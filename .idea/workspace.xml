@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d51c02d4-caea-430d-91a0-cb195f3363a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/comunir/unirproducts/data/ElasticsearchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/comunir/unirproducts/ProductsApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
